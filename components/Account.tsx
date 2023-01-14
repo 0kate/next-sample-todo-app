@@ -4,7 +4,7 @@ import { Database } from '../utils/database.types';
 
 type Profiles = Database['public']['Tables']['profiles']['Row'];
 
-export default function Account({ session }) {
+export default function Account({ session }: { session: Session }) {
   const supabase = useSupabaseClient<Database>();
   const user = useUser();
   const [loading, setLoading] = useState(true);
